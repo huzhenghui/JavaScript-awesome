@@ -1,0 +1,15 @@
+app: Serverless-scf-nodejs
+component: scf
+name: scf-nodejs
+
+inputs:
+  src: ./
+  handler: index.main_handler
+  region: na-toronto
+  runtime: Nodejs12.16
+  events:
+    - apigw:
+        parameters:
+          endpoints:
+            - path: /
+              method: GET
