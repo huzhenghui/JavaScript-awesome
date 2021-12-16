@@ -9,6 +9,8 @@
     "flow": "/usr/local/opt/flow/bin/flow",
     "prestart:rx": "corepack pnpm run build",
     "start:rx": "node ./lib/rx.js",
+    "prestart:types": "corepack pnpm run build",
+    "start:types": "node ./lib/types.js",
     "clean-all": "trash ./lib/ ./node_modules/ ./.pnpm-debug.log"
   },
   "keywords": [],
