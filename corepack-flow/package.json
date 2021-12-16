@@ -6,13 +6,14 @@
   "scripts": {
     "build": "corepack pnpx babel src/ -d lib/",
     "prepublish": "corepack pnpm run build",
-    "start": "node ./lib/rx.js",
+    "prestart:rx": "corepack pnpm run build",
+    "start:rx": "node ./lib/rx.js",
     "clean-all": "trash ./lib/ ./node_modules/ ./.pnpm-debug.log"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@6.21.0",
+  "packageManager": "pnpm@6.24.1",
   "devDependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
