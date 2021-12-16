@@ -6,6 +6,7 @@
   "scripts": {
     "build": "corepack pnpx babel src/ -d lib/",
     "prepublish": "corepack pnpm run build",
+    "flow": "/usr/local/opt/flow/bin/flow",
     "prestart:rx": "corepack pnpm run build",
     "start:rx": "node ./lib/rx.js",
     "clean-all": "trash ./lib/ ./node_modules/ ./.pnpm-debug.log"
